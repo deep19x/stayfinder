@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>WanderLust</title>
+  <title>StayFinder</title>
 
   <!-- CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -21,14 +21,22 @@
     rel="stylesheet">
 </head>
 
-<body>
+<body class="d-flex flex-column min-vh-100">
   <%- include("../includes/navbar") %>
-  <div class="container">
-    <%- include("../includes/flash") %>
-    <%- body %>
-  </div>
-  <%- include("../includes/footer") %>
 
+  <main class="flex-fill">
+    <div class="container-fluid px-4">
+
+        <!-- Centered content -->
+        <div class="content-wrapper">
+            <%- include("../includes/flash") %>
+            <%- body %>
+        </div>
+
+    </div>
+  </main>
+
+  <%- include("../includes/footer") %>
   <!-- JS -->
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script> <!-- load Leaflet first -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
